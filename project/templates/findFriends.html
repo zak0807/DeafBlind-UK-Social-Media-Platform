@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Find Friends</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+{% extends "headers/loginHeader.html" %}
+
+{% block content %}
+
+  <body>
+    <section>
+      <div class="row">
+        <div class="column1">
+          <h1>
+           Find Friends
+          </h1>
+          <button class="search-btn">
+            Search
+          </button>
+        </div>
+        <div class="column2">
+          <img
+          alt="Example User"
+            class="hero-image"
+            src="https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113__480.png"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="product-list" style="background-color:inherit">
+      <div>
+        <h1 class="align-center">
+          People You Would Get on With
+        </h1>
+      </div>
+      
+      <div class="searchbar">
+          <input class="search-input" placeholder="Search">
+          <span class="search-icon"></span>
+        </div>
+
+      <div class="product-container">
+        
+        
+     
+<!--       First Product -->
+
+      <div class="card">
+        <div class="content">
+          
+        <div class="title">Simon </div>
+        <div class="image">
+            <button  class="details">
+          <img
+          alt="Example User"
+            src="https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113__480.png"
+          />
+          </button>
+        </div>
+
+        <div class="date">
+            <p2>Also loves Minecraft!</p2>
+        </div>
+
+        <div class="text">
+            Hi, my Name is Simon. One fun fact about me is...
+        </div>
+         </div>
+
+          <button  class="buy-button">
+            Add Friend
+          </button>
+     
+      </div>
+
+      <!-- Second Product -->
+
+      <div class="card">
+        <div class="title">Alex </div>
+        <div class="image">
+            <button  class="details">
+            <img
+            alt="Example User"
+            src="https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113__480.png"
+          />
+            </button>
+        </div>
+
+        <div class="date">
+            <p2>Also from London</p2>
+        </div>
+
+        <div class="text">
+         Hey! Anyone else love football? 
+        </div>
+   
+
+           <button  class="buy-button">
+            Add Friend
+          </button>
+     
+      </div>
+      
+<!--       Third Product -->
+      <div class="card">
+        <div class="title">Charlie</div>
+        <div class="image">
+            <button  class="details">
+          <img
+          alt="Example User"
+            src="https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113__480.png"
+          />
+            </button>
+        </div>
+        <div class="date">
+            <p2>Also has reduced vision!</p2>
+        </div>
+        <div class="text">
+            2022 Conference. Sign up now!
+        </div>
+           <button  class="buy-button">
+            Add Friend
+          </button>
+      </div>
+      
+      
+<!--       Fourth Product -->
+      <div class="card">
+        <div class="title">Jamie</div>
+        <div class="image">
+            <button  class="details">
+          <img
+          alt="Example User"
+            src="https://cdn.pixabay.com/photo/2017/02/23/13/05/avatar-2092113__480.png"
+          />
+          </button>
+        </div>
+
+        <div class="date">
+            <p2> Also from London </p2>
+        </div>
+
+        <div class="text">
+            Hi! I'm new on this app...
+        </div>
+   
+           <button  class="buy-button">
+            Add Friend
+          </button>
+     
+      </div>
+         </div>
+      
+    </section>
+  </body>
+
+
+
+{% endblock %}
+
+</html>

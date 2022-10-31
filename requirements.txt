@@ -1,0 +1,11 @@
+Flask
+bcrypt
+regex
+mysql-connector-python
+colorblind
+emoji
+opencv-python
+Pillow
+numpy
+deepface
+python-facepp

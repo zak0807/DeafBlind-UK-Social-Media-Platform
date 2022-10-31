@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=”en”
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <title>Signup</title>
+</head>
+
+{% extends "headers/startHeader.html" %}
+
+{% block content %}
+<body>
+
+  <form class="profilebox" method="post">
+    <h1>Signup</h1>
+
+    <div class="formgroup">
+      <label>Forename</label>
+      <input type="text" name="forename" placeholder="forename" required>
+    </div>
+
+    <div class="formgroup">
+      <label>Surname</label>
+      <input type="text" name="surname" placeholder="surname" required>
+    </div>
+    
+    <div class="formgroup">
+      <label>Email</label>
+      <input type="text" name="email" placeholder="email" required>
+    </div>
+    
+    <div class="formgroup">
+      <label>Date of Birth</label>
+      <input type="date" name="dateofbirth" required>
+    </div>
+
+    <div class="formgroup">
+      <label>Impairment</label>
+      <input type="text" name="impairment" placeholder="impairment">
+    </div>
+    
+    <div class="formgroup">
+      <button type="submit" name="submit">Sign Up</button>
+    </div>
+
+    <p>Are you already logged in click <a href="/login">here</a><p>
+  </form>
+
+</body>
+{% endblock %}
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=”en”
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <title>Login</title>
+</head>
+
+{% extends "headers/startHeader.html" %}
+
+{% block content %}
+<body>
+
+    <form class="profilebox" method="post">
+        <h1>Login</h1>
+
+        <div class="formgroup">
+          <label>Email</label>
+          <input type="text" name="email" placeholder="email" required>
+        </div>
+    
+        <div class="formgroup">
+          <button type="submit" name="submit">Login</button>
+        </div>
+    
+        <p>Do you need to sign up? click <a href="/login">here</a><p>
+      </form>
+
+</body>
+{% endblock %}
+
+</html>

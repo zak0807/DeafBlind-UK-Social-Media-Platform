@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create Post</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's javascript file -->
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+  </head>
+
+{% extends "headers/loginHeader.html" %}
+
+{% block content %}
+
+  <body>
+    <form class="profilebox" method="post" action="{{ url_for('transform') }} " enctype="multipart/form-data">
+        <h1>Post</h1>
+
+        <div class="upload">
+        <label for="image">Select image:  </label>
+        <input type="file" id="image" name="image" accept="image/*" onchange="loadFile(event)" style="display: none;">
+        </div>
+      
+        <br><br>
+
+        <img id="output" width="200" />	
+        <br>
+
+        <div class="formgroup">
+          <label for="alt">Input Alt text</label>
+          <input type="text" name="altText"" required>
+        </div>
+
+        <label for="img">Daltonize: (Make friendly to colour blind)</label>
+        
+        <div class="formgroup">
+          <select name="colourblinds" id="cb">
+              <option value="protanopia">Protanopia</option>
+              <option value="Deuteranopia">Deuteranopia</option>
+              <option value="Tritanopia">Tritanopia</option>
+          </select>
+        </div>
+
+        <div class="formgroup">
+          <label for="contrast">Input number between 1 and 2 to increase contrast:</label>
+          <input type="text" name="contrast"" required>
+        </div>
+
+        <div class="formgroup">
+          <button type="submit" name="submit">Sign Up</button>
+        </div>
+      </form>
+  </body>
+
+{% endblock %}
+
+</html>
+
+
+
+

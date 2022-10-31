@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create Post</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's javascript file -->
+
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        </script>
+  </head>
+
+{% extends "headers/loginHeader.html" %}
+
+{% block content %}
+
+  <body>
+    <h1>Post:</h1>
+
+    {{img}}
+    <form action="/post" method="get">
+    <button type="submit">Re - Edit</button>
+    </form>
+    <br>
+    <form action="/events" method="get">
+    <button type="button">Submit!</button>
+    <form> 
+
+
+
+   
+  </body>
+
+
+
+{% endblock %}
+
+</html>
+
+
+
+

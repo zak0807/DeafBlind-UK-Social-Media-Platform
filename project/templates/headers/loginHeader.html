@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <title>header</title>
+</head>
+
+<div class="navbar">
+    <a href="/profile">Profile</a>
+    <a href="/forum">Forum</a>
+    <a href="/post">Post</a>
+    <a href="/events">Events</a>
+    <a href="/findFriends">Find Friends</a>
+        <button id="contrastBtn" style="width: 50px; height: 50px; background-color: black; font-size: 30px">☀️</button>
+</div>
+
+<script>
+        var constrastButton = document.getElementById('contrastBtn')
+
+        //function to set high contrast mode
+        constrastButton.addEventListener('click', function (){
+            if (document.body.style.backgroundColor == "yellow"){
+                document.body.style.backgroundColor = "white"
+            }
+            else{
+                document.body.style.backgroundColor = "yellow"
+            }
+
+        })
+    </script>
+
+{% block content %} {% endblock %}

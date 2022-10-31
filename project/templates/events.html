@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Events</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+{% extends "headers/loginHeader.html" %}
+
+{% block content %}
+<body>
+
+</body>
+
+  <body>
+      <div class="row">
+        <div class="column1">
+          <h1>
+           Find Events
+          </h1>
+          <button class="search-btn">
+            Search
+          </button>
+        </div>
+        <div class="column2">
+            <button  class="details">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-list" style="background-color: inherit">
+      <div>
+        <h1 class="align-center">
+          Events
+        </h1>
+      </div>
+      
+      <div class="searchbar">
+          <input class="search-input" placeholder="Search">
+          <span class="search-icon"></span>
+        </div>
+
+      <div class="product-container">
+        
+        
+     
+<!--       First Product -->
+
+      <div class="card">
+        <div class="content">
+          
+        
+          
+       
+        <div class="title"> Sign language course course </div>
+        <div class="image">
+            <a href="/findFriends"><button  class="details" action="/findFriends" id=1 >
+          <img 
+            alt="Multiple people together"
+            src="https://cdn.pixabay.com/photo/2017/01/31/08/39/alphabet-2023292__480.png"
+          />
+          </button></a>
+        </div>
+
+        <div class="date">
+            <p2>1st November 2022</p2>
+        </div>
+
+        <div class="text">
+            Learn to sign now!
+        </div>
+         </div>
+
+          <button  class="buy-button">
+            Sign up
+          </button>
+     
+      </div>
+
+      <!-- Second Product -->
+
+      <div class="card">
+        <div class="title">Community Social group for people with hearing loss </div>
+        <div class="image">
+          <img
+          
+            alt="Multiple people together"
+            src="https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396__480.jpg"
+          />
+        </div>
+
+        <div class="date">
+            <p2>2nd November 2022</p2>
+        </div>
+
+        <div class="text">
+          Blind football event
+        </div>
+   
+
+           <button  class="buy-button">
+            Sign up
+          </button>
+     
+      </div>
+      
+<!--       Third Product -->
+      <div class="card">
+        <div class="title">DeafBlind conference</div>
+        <div class="image">
+            <button  class="details">
+            <img
+            alt="Multiple people together"
+            src="https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924__480.jpg"
+          />
+          </button>
+        </div>
+        <div class="date">
+            <p2>4th November 2022</p2>
+        </div>
+        <div class="text">
+            2022 Conference. Sign up now!
+        </div>
+           <button  class="buy-button">
+            Sign up
+          </button>
+      </div>
+      
+      
+<!--       Fourth Product -->
+      <div class="card">
+        <div class="title">14-16 Basketball</div>
+        <div class="image">
+            <button  class="details">
+          <img
+            src="https://cdn.pixabay.com/photo/2013/07/12/14/07/basketball-147794__480.png"
+          />
+          <button></button>
+        </div>
+
+        <div class="date">
+            <p2>6th November 2022</p2>
+        </div>
+
+        <div class="text">
+            Kids football tournament
+        </div>
+   
+           <button  class="buy-button">
+            Sign up
+          </button>
+     
+      </div>
+         </div>
+      
+      
+      
+    </section>
+  </body>
+
+
+
+{% endblock %}
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forum</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='forum.css') }}">
+  </head>
+
+{% extends "headers/loginHeader.html" %}
+
+{% block content %}
+  
+  <body>
+    <div class="top-bar">
+        <h1>
+            My Forum
+        </h1>
+    </div>
+    <div class="main">
+        <p>
+        </p>
+    </div>
+    <script src="{{ url_for('static', filename='data.js') }}"></script>
+    
+    <script>
+        console.log(threads);
+        var container = document.querySelector('p');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <a href="/thread${thread.id}">
+                    <h4 class="title">
+                        ${thread.title}
+                    </h4>
+                    <div class="bottom">
+                        <p class="timestamp">
+                            ${new Date(thread.date).toLocaleString()}
+                        </p>
+                        <p class="comment-count">
+                            ${thread.comments.length} comments
+                        </p>
+                    </div>
+                </a>
+            </li>
+            `
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+</body>
+
+{% endblock %}
+
+</html>

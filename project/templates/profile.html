@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang=”en”
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <title>Profile</title>
+</head>
+
+{% extends "headers/loginHeader.html" %}
+
+{% block content %}
+<body>
+
+    <div class="profilebox">
+        <div class="profilestrip"> 
+            <img src="https://www.w3schools.com/images/lamp.jpg" alt="profile pic">
+        </div>
+        
+
+        <div class="profileinfo"> 
+            <h2>John Smith</h2>
+
+            
+            <div>
+            <div class="tag"> 
+                Deaf
+            </div>
+            <div class="tag"> 
+                Blind
+            </div>
+            </div>
+
+            <p>
+                Hi, my name is John Smith
+            </p>
+        </div>
+    </div>
+
+</body>
+{% endblock %}
+
+</html>
