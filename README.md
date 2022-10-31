@@ -1,4 +1,4 @@
-# DeafBlind-UK-Social-Media-Platform
+# DeafBlind UK Social Media Platform
 Web Social Media Platform built by a team of 6 as part of the 2022 CodeForGood Hackathon organised by J.P. Morgan.
 
 This social media platform caters of the needs of partially deaf and/or blind people by providing accessibility features such as:
